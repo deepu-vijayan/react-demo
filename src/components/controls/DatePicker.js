@@ -14,7 +14,7 @@ const DatePicker = (props)=> {
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <MuiDatePicker 
             variant="inline"
-            format="dd-m-yyyy"
+            format="dd-MM-yyyy"
             name={props.name} 
             value={props.value} 
             label={props.label}

@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, makeStyles, MenuItem, Select as MuiSelect } from "@material-ui/core";
+import { FormControl, FormHelperText, InputLabel, makeStyles, MenuItem, Select as MuiSelect } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 const CustomeSelect = (props) => {
     const classes = useStyles();
     return (
-        <FormControl variant="outlined" className={classes.formControl}>
+        <FormControl variant="outlined" className={classes.formControl} {...(props.error && {error:true})}>
             <InputLabel htmlFor="outlined-age-native-simple" >{props.label}</InputLabel>
             <MuiSelect
                 value={props.department}
@@ -33,6 +33,7 @@ const CustomeSelect = (props) => {
                 }
 
             </MuiSelect>
+            {props.error &&<FormHelperText>{props.error}</FormHelperText>}
         </FormControl>
     )
 }

@@ -21,6 +21,9 @@ const theme = createMuiTheme({
       MuiTextField:{
         variant:"outlined",
         InputLabelProps:{shrink: true}
+      },
+      MuiButton:{
+        variant:"contained"
       }
     }
   })
